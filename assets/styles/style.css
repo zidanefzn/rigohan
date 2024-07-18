@@ -437,6 +437,39 @@ footer p {
 /* footer end */
 
 /* responsive */
+@media screen and (max-width: 1200px) {
+    /* main */
+    /* landing page */
+    .landing-desc span {
+        font-size: 2.3rem;
+    }
+
+    .landing-desc p {
+        font-size: 1rem;
+    }
+
+    .landing-img img {
+        width: 20rem;
+    }
+    /* landing page end */
+
+    /* main content - desc and title */
+    .ads {
+        margin-block-start: -4rem;
+    }
+    /* main content - desc and title end */
+
+    /* slider */
+     .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+    /* slider end */
+}
+
 /* tablet */
 @media screen and (max-width: 768px) {
     /* header */
@@ -502,22 +535,6 @@ footer p {
         width: 23rem;
     }
     /* landing page end */
-
-    /* main content - desc and title */
-    .ads {
-        margin-block-start: -4rem;
-    }
-    /* main content - desc and title end */
-
-    /* slider */
-    .slider-wrapper {
-        margin: 0 10px 40px;
-    }
-
-    .slider-wrapper .swiper-slide-button {
-        display: none;
-    }
-    /* slider end */
 
     /* menu and staff card */
     .menu-card img, .staff-card img {
