@@ -553,7 +553,7 @@ footer p {
 
     /* ads video */
     video {
-        width: 85%;
+        width: 90%;
     }
     /* ads video end */
 
@@ -651,10 +651,4 @@ footer p {
         text-align: center;
     }
     /* main content - desc and title end */
-
-    /* ads video */
-    video {
-        width: 80%;
-    }
-    /* ads video end */
 }
