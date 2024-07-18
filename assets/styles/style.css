@@ -45,7 +45,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 1.3rem;
     padding: 6px 20px;
     border-radius: 99px;
     transition: 0.4s;
@@ -170,7 +170,7 @@ nav a:hover {
 
 .ads {
     display: flex;
-    margin-block-start: -4.5rem;
+    margin-block-start: -8rem;
 }
 
 .content-desc {
@@ -188,6 +188,7 @@ h2 {
     font-size: 1.2rem;
     max-width: 1200px;
     text-align: center;
+    margin-block-start: -0.5rem;
 }
 /* main - content desc and title end */
 
@@ -314,7 +315,7 @@ video {
 
 /* side content - testi card */
 .side-content h3 {
-    font-size: x-large;
+    font-size: 1.5rem;
 }
 
 .testi-card-container {
@@ -500,8 +501,13 @@ footer p {
     .landing-img img {
         width: 23rem;
     }
-    /* main end */
     /* landing page end */
+
+    /* main content - desc and title */
+    .ads {
+        margin-block-start: -4rem;
+    }
+    /* main content - desc and title end */
 
     /* slider */
     .slider-wrapper {
@@ -540,6 +546,7 @@ footer p {
         max-height: 200px;
     }
     /* side content - testi card end */
+    /* main end */
 
     /* footer */
     .footer-content h4, .contact-info > a {
@@ -611,6 +618,10 @@ footer p {
 
     .content, .side-content {
         padding: 30px;
+    }
+
+    .ads {
+        margin-block-start: -2.5rem;
     }
 
     h2 {
