@@ -164,7 +164,7 @@ nav a:hover {
 /* landing page end */
 
 /* main - content desc and title */
-.content, .side-content {
+.content {
     padding: 50px;
 }
 
@@ -206,7 +206,7 @@ h2 {
     margin: 0 70px 55px;
 }
 
-.side-content .slider-wrapper {
+#testi .slider-wrapper {
     max-width: 1200px;
 }
 
@@ -313,8 +313,8 @@ video {
 }
 /* ads video end */
 
-/* side content - testi card */
-.side-content h3 {
+/* testi card */
+#testi h3 {
     font-size: 1.5rem;
 }
 
@@ -348,7 +348,7 @@ video {
 .testi-card .user i {
     font-size: 30px;
 }
-/* side content - testi card end */
+/* testi card end */
 /* main end */
 
 /* footer */
@@ -557,12 +557,12 @@ footer p {
     }
     /* ads video end */
 
-    /* side content - testi card */
+    /* testi card */
      .testi-card p {
         height: fit-content;
         max-height: 200px;
     }
-    /* side content - testi card end */
+    /* testi card end */
     /* main end */
 
     /* footer */
@@ -633,7 +633,7 @@ footer p {
 
     /* main content - desc and title */
 
-    .content, .side-content {
+    .content {
         padding: 30px;
     }
 
