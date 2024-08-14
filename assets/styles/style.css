@@ -1,0 +1,573 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar-container {
+    width: 100vw;
+    padding: 0.5rem 5rem;
+    background-color: transparent;
+    backdrop-filter: blur(70px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    z-index: 99;
+}
+
+.logo img {
+    width: 70px;
+}
+
+nav {
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 6px 20px;
+    border-radius: 99px;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background-color: #aa2128;
+    color: #fbfbfb;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 50px;
+    height: 28px;
+    opacity: 0;
+    left: -15px;
+    top: -5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: #fbfbfb;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: #fbfbfb;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+
+.landing-page {
+    height: 100vh;
+    padding: 40px;
+
+    background-image: url(../img/lang-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing-desc span {
+    display: block;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.landing-desc p {
+    font-size: 1.2rem;
+    margin-block-end: 4rem;
+}
+
+.landing-desc a {
+    padding: 15px 30px;
+
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: #fbfbfb;
+    
+    background-color: #ffa500;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.landing-desc a:hover, .menu-card a:hover {
+    filter: brightness(75%);
+}
+
+.landing-img img {
+    width: 36rem;
+}
+
+.content {
+    padding: 50px;
+}
+
+.ads {
+    display: flex;
+    margin-block-start: -8rem;
+}
+
+.content-desc {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.content-desc p {
+    font-size: 1.2rem;
+    max-width: 1200px;
+    text-align: center;
+    margin-block-start: -0.5rem;
+}
+
+.swiper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    padding: 20px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 70px 55px;
+}
+
+#testi .slider-wrapper {
+    max-width: 1200px;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background-color: #bbb;
+    height: 15px;
+    width: 15px;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #ffa500;
+    padding: 33px;
+    border: solid #ffa500;
+    border-radius: 50%;
+    margin-top: -50px;
+    transition: 0.4s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: white;
+    background-color: #ffa500;
+}
+
+.staff-card, .menu-card {
+    user-select: none;
+    padding: 10px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    border: solid #dddddd;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.menu-card {
+    padding-block-end: 2rem;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+}
+
+.menu-card .price {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.menu-card a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s ease;
+
+    background-color: #ffa500;
+    border-radius: 99px;
+    padding: 0.8rem 5rem;
+    margin-block-start: 3rem;
+    margin-inline: auto;
+}
+
+.menu-card a:active, .landing-desc a:active {
+    transform: scale(0.9);
+}
+
+.menu-card img, .menu-card .name, .menu-card .price,
+.staff-card img, .staff-card .staff-name .staff-card .job-title {
+    margin: 0.5rem auto;
+}
+
+.menu-card img, .staff-card img {
+    height: 200px;
+}
+
+.menu-card .name, .staff-card .job-title {
+    font-size: 23px;
+    text-align: center;
+}
+
+.menu-card .price, .staff-name {
+    font-weight: bolder;
+}
+
+.staff-card:hover, .menu-card:hover {
+    box-shadow: 5px 5px 10px #0c0c0c26,
+                -5px -5px 10px #0c0c0c26;
+}
+
+.staff-card .staff-name {
+    font-size: 27px;
+    text-align: center;
+    margin-block-start: 1rem;
+}
+
+#testi h3 {
+    font-size: 1.5rem;
+}
+
+.testi-card-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+}
+
+.testi-card {
+    background-color: #d8d8d8;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.testi-card i {
+    font-size: 40px;
+}
+
+.testi-card p {
+    height: 150px;
+    overflow: auto;
+}
+
+.testi-card .user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testi-card .user i {
+    font-size: 30px;
+}
+
+footer {
+    color: white;
+    background-color: #aa2128;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.contact-container {
+    max-width: 300px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-icon {
+    width: 30px;
+    font-size: 25px;
+    padding: 5px;
+    color: white;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover, .footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.sosmed-list {
+    display: flex;
+    gap: 30px;
+}
+
+.sosmed-list a {
+    color: white;
+    font-size: 30px;
+}
+
+footer p {
+    width: 100vw;
+    text-align: center;
+    border-top: solid white;
+    padding: 20px 0 1px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .landing-desc span {
+        font-size: 2.3rem;
+    }
+
+    .landing-desc p {
+        font-size: 1rem;
+    }
+
+    .landing-img img {
+        width: 20rem;
+    }
+
+    .ads {
+        margin-block-start: -4rem;
+    }
+
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        background-color: #aa2128;
+        right: 0;
+        top: 0;
+        width: 60%;
+        height: 100vh;
+        position: absolute;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        z-index: -1;
+    
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav a {
+        padding: 0;
+        color: #fbfbfb;
+    }
+
+    .landing-page {
+        flex-flow: row wrap;
+    }
+
+    .landing-img {
+        margin-block-start: 50px;
+        order: -1;
+    }
+
+    .landing-desc span {
+        display: inline;
+        font-size: 2.3rem;
+    }
+
+    .landing-desc p {
+        font-size: 1rem;
+    }
+
+    .landing-img img {
+        width: 23rem;
+    }
+  
+    .menu-card img, .staff-card img {
+        height: 170px;
+    }
+
+    .menu-card .price {
+        font-size: 35px;
+    }
+
+    .menu-card a {
+        padding: 0.8rem 3rem;
+        margin-block-start: 1.5rem;
+    }
+
+    video {
+        width: 90%;
+    }
+
+     .testi-card p {
+        height: fit-content;
+        max-height: 200px;
+    }
+
+    .footer-content h4, .contact-info > a {
+        display: none;
+    }
+
+    .footer-content {
+        flex-flow: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        gap: 25px;
+    }
+
+    .footer-nav-list {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .sosmed-list a {
+        font-size: 25px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .navbar-container {
+        padding:0.5rem 2rem;
+    }
+
+    .logo img {
+        width: 45px;
+    }
+
+    .landing-desc {
+        margin-top: -70px;
+    }
+
+    .landing-desc span {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .landing-img {
+        margin-top: -20px;
+    }
+
+    .landing-img img {
+        width: 15rem;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .ads {
+        margin-block-start: -2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .content-desc p {
+        font-size: 1rem;
+        max-width: 1200px;
+        text-align: center;
+    }
+}
