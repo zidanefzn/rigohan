@@ -108,7 +108,7 @@ nav a:hover {
     height: 100vh;
     padding: 40px;
 
-    background-image: url(../img/lang-bg.png);
+    background-image: url(../img/land-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,11 +156,6 @@ nav a:hover {
     padding: 50px;
 }
 
-.ads {
-    display: flex;
-    margin-block-start: -8rem;
-}
-
 .content-desc {
     display: flex;
     flex-flow: column nowrap;
@@ -185,18 +180,19 @@ h2 {
     justify-content: center;
 }
 
-.slider-wrapper {
+.slider-wrapper, .testi-slider-wrapper {
     padding: 20px;
     overflow: hidden;
     max-width: 1000px;
     margin: 0 70px 55px;
 }
 
-#testi .slider-wrapper {
-    max-width: 1200px;
+.testi-slider-wrapper {
+    max-width: 800px;
 }
 
-.slider-wrapper .swiper-pagination-bullet {
+.slider-wrapper .swiper-pagination-bullet,
+.testi-slider-wrapper .swiper-pagination-bullet {
     background-color: #bbb;
     height: 15px;
     width: 15px;
@@ -288,14 +284,15 @@ h2 {
     margin-block-start: 1rem;
 }
 
-#testi h3 {
-    font-size: 1.5rem;
+.customer-info-container {
+    padding: 50px;
+
+    display: flex;
+    justify-content: space-around;
 }
 
-.testi-card-container {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 30px;
+#testi h3 {
+    font-size: 1.5rem;
 }
 
 .testi-card {
@@ -321,6 +318,34 @@ h2 {
 
 .testi-card .user i {
     font-size: 30px;
+}
+
+aside {
+    background-color: #f1ebeb;
+    border-radius: 20px;
+    padding-inline: 1rem;
+
+    height: 550px;
+    overflow: auto;
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex-basis: 400px;
+}
+
+aside .side-header {
+    background-color: #f1ebeb;
+    position: sticky;
+    top: 0;
+}
+
+.side-content {
+    border-bottom: solid #d5cfcf;
+}
+
+aside .side-img{
+    max-width: 200px;
 }
 
 footer {
@@ -409,16 +434,24 @@ footer p {
         width: 20rem;
     }
 
-    .ads {
-        margin-block-start: -4rem;
-    }
-
-    .slider-wrapper {
+    .slider-wrapper, .testi-slider-wrapper {
         margin: 0 10px 40px;
     }
 
     .slider-wrapper .swiper-slide-button {
         display: none;
+    }
+
+    .customer-info-container {
+        padding: 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #testi {
+        width: 100vw;
     }
 }
 
@@ -492,11 +525,7 @@ footer p {
         margin-block-start: 1.5rem;
     }
 
-    video {
-        width: 90%;
-    }
-
-     .testi-card p {
+    .testi-card p {
         height: fit-content;
         max-height: 200px;
     }
@@ -555,10 +584,6 @@ footer p {
 
     .content {
         padding: 30px;
-    }
-
-    .ads {
-        margin-block-start: -2.5rem;
     }
 
     h2 {
