@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    border: solid;
 }
 
 body {
@@ -289,6 +290,7 @@ h2 {
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #testi h3 {
